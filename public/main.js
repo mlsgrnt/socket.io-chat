@@ -17,7 +17,7 @@ $(function () {
   ];
 
   if ('Notification' in window) {
-    document.querySelector('.notiButton').display = 'block';
+    document.querySelector('.notiButton').style.display = 'block';
   }
 
   // Initialize varibles
