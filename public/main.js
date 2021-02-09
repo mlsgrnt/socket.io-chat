@@ -16,6 +16,10 @@ $(function () {
     '#d300e7',
   ];
 
+  if ('Notification' in window) {
+    document.querySelector('.notiButton').display = 'block';
+  }
+
   // Initialize varibles
   var $window = $(window);
   var $usernameInput = $('.usernameInput'); // Input for username
@@ -255,7 +259,8 @@ $(function () {
     try {
       var notification = new Notification(data.username + ' joined');
     } catch (err) {
-      alert('Notification API error: ' + err);
+      // alert('Notification API error: ' + err);
+      console.log(err);
     }
     addParticipantsMessage(data);
   });
